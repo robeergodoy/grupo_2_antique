@@ -36,3 +36,13 @@ El sitio va a estar enfocado en hacer que la experiencia del vendedor sea lo má
 ### Carrito de Compras
 
 ![Detalle de Producto](./assets/carrito.jpg)
+
+### Formulario de Registro
+
+#### Usuarios Nuevos
+
+![Nuevos usuarios](./assets/usuario_nuevo.jpg)
+
+#### Usuarios Registrados
+
+![Usuarios registrados](./assets/usuario_registrado.jpg)
