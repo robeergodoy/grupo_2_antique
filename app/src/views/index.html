@@ -1,13 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home Page</title>
-	<link rel="stylesheet" href="/css/app.css">
-</head>
-<body>
-	<h1>Home Page</h1>
-	<img src="/images/node.jpg" width="60%">
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Antique</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="/css/index.css">
+	</head>
+	<body>
+		<header class="main-header">
+			<div class="main-header_container">
+				<div class="main-header_logo">
+					<a href="/" class="main-header_home-link" class="col-2">
+						Antique
+					</a>
+				</div>
+				<div class="main-header_search-form">
+					<form action="" method="GET" class="search-form">
+							<input type="text" placeholder="Busca artículos o tiendas" class="search-form_input">
+							<button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+					</form>
+				</div>
+				<div class="main-header_signin-cart">
+					<a href="/register.html" class="main-header_signin-link">
+							Inicia sesión
+					</a>
+					<a href="productCart.html" class="main-header_cart-link">
+						<i class="fas fa-shopping-cart"></i>
+					</a>
+				</div>
+			</div>
+
+			<nav class="main-navbar">
+				<ul>
+					<li><a href="#">Ofertas</a></li>
+					<li><a href="#">Accesorios</a></li>
+					<li><a href="#">Ropa y Calzado</a></li>
+					<li><a href="#">Hogar</a></li>
+					<li><a href="#">Arte</a></li>
+					<li><a href="#">Regalos</a></li>
+				</ul>
+		    </nav>
+		</header>
+
+		<!-- Banner -->
+		<div class="banner"></div>
+		<!-- /Banner -->
+
+		<div class="container products-wrapper">
+			<div class="col-12 col-sm-6 col-lg-3">
+				<section class="product-box">
+					<a href="">
+						<figure class="product-box_image">
+							<img src="images/mates.jpeg" alt="imagen de producto">
+						</figure>
+						<article class="product-box_data">
+							<h2>$100</h2>
+							<p>Mates artesanales</p>
+						</article>
+					</a>
+				</section>
+			</div>
+			<div class="col-12 col-sm-6 col-lg-3">
+				<section class="product-box">
+					<a href="">
+						<figure class="product-box_image">
+							<img src="images/joyas.jpeg" alt="imagen de producto">
+						</figure>
+						<article class="product-box_data">
+							<h2>$230</h2>
+							<p>Joyas de plata</p>
+						</article>
+					</a>
+				</section>
+			</div>
+			<div class="col-12 col-sm-6 col-lg-3">
+				<section class="product-box">
+					<a href="">
+						<figure class="product-box_image">
+							<img src="images/tapices.jpeg" alt="imagen de producto">
+						</figure>
+						<article class="product-box_data">
+							<h2>$380</h2>
+							<p>Tapices Artesanales</p>
+						</article>
+					</a>
+				</section>
+			</div>
+		</div>
+	</body>
 </html>
