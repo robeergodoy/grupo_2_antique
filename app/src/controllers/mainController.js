@@ -13,6 +13,11 @@ const controller = {
 		let html = readHTML('index');
 		res.send(html);
 	},
+
+	register: (req,res) => {
+		let html = readHTML('register');
+		res.send(html);
+	},
 };
 
 module.exports = controller

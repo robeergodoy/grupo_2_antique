@@ -7,5 +7,7 @@ const mainController = require('../controllers/mainController');
 
 /* GET - home page. */
 router.get('/', mainController.root);
+/* GET - register page. */
+router.get('/register', mainController.register);
 
 module.exports = router;
