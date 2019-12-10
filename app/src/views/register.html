@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+        <div class="container">
+                <div class="form__top">
+                    <h2>Completa <span>tus datos</span></h2>
+                </div>		
+            
+        <form action="register.html" method="POST">
+                <p>
+                        <label>Nombre:</label>
+                        <input type="text" name="nombre" required>
+                      </p>
+
+                      <p>
+                            <label>Apellido:</label>
+                            <input type="text" name="apellido" required>
+                      </p>
+                
+                      <p>
+                        <label>E-mail:</label>
+                        <input type="email" name="email" required>
+                      </p>
+                
+                      <p>
+                        <label>Contraseña:</label>
+                        <input type="password" name="password" required>
+                      </p>
+                      <div class="form">
+                            <input class="submit" type="submit" value="Crear cuenta">
+                            <input class="reset" type="reset" value="Limpiar">	
+                        </div>
+    
+</body>
+</html>
