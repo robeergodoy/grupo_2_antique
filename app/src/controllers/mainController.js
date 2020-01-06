@@ -18,6 +18,14 @@ const controller = {
 		let html = readHTML('register');
 		res.send(html);
 	},
+	productDetail: (req,res) => {
+		let html = readHTML('productDetail');
+		res.send(html);
+	},
+	productCart: (req,res) => {
+		let html = readHTML('productCart');
+		res.send(html);
+	},
 };
 
-module.exports = controller
+module.exports = controller;
