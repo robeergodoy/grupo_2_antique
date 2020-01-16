@@ -14,13 +14,18 @@ const controller = {
 	},
 
 	register: (req,res) => {
-		let html = readHTML('register');
-		res.send(html);
+		res.render('register');
 	},
+
+	products: (req,res) => {
+		res.render('products');
+	},
+
 	productDetail: (req,res) => {
 		let html = readHTML('productDetail');
 		res.send(html);
 	},
+
 	productCart: (req,res) => {
 		let html = readHTML('productCart');
 		res.send(html);
