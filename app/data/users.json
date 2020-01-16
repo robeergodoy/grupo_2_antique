@@ -1,0 +1,10 @@
+[
+    {
+        "id": 0,
+        "firstName": "Facundo",
+        "lastName": "Lanus",
+        "email": "facundolanus@gmail.com",
+        "password": "holamundo",
+        "category": "no premium"
+    }
+]

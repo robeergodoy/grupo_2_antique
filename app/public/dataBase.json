@@ -1,0 +1,23 @@
+[
+    {
+        "id": 0,
+        "name": "Mates artesanales",
+        "price": 100,
+        "imageName": "mates.jpeg",
+        "category": ""
+    },
+    {
+        "id": 1,
+        "name": "Joyas de plata",
+        "price": 230,
+        "imageName": "joyas.jpeg",
+        "category": ""
+    },
+    {
+        "id": 2,
+        "name": "Tapices Artesanales",
+        "price": 380,
+        "imageName": "tapices.jpeg",
+        "category": ""
+    }
+]
