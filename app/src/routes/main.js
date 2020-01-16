@@ -11,6 +11,8 @@ router.get('/', mainController.root);
 /* GET - register page. */
 router.get('/register', mainController.register);
 
+router.post('/register', mainController.registerSaveUser)
+
 router.get('/products', mainController.products);
 
 router.get('/productDetail/:id', mainController.productDetail);
