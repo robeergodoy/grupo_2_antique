@@ -9,9 +9,11 @@
 		<div class="banner"></div>
 
 		<div class="container products-wrapper">
-		<% productsList.forEach(product => { %>
-			<%- include('./product', {product: product}) %> 
-		<% }); %>
+			<div class="row">
+				<% productsList.forEach(product => { %>
+					<%- include('./product', {product: product}) %> 
+				<% }); %>
+			</div>
 		</div>
 		
 	</body>
