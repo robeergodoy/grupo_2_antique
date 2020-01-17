@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcrypt')
-let productsJson = fs.readFileSync('./public/dataBase.json', {encoding: 'utf-8'})
+let productsJson = fs.readFileSync('./data/dataBase.json', {encoding: 'utf-8'})
 let usersListJson = fs.readFileSync('./data/users.json')
 
 productsJson = JSON.parse(productsJson)
@@ -18,7 +18,7 @@ function readHTML (fileName) {
 
 const controller = {
 	root: (req, res) => {
-		res.render('index', {productList: productsJson});
+		res.render('main', {productsList: productsJson});
 	},
 
 	register: (req,res) => {
@@ -38,21 +38,7 @@ const controller = {
 		fs.writeFileSync('./data/users.json', usersListJson)
 
 		res.redirect('/')
-	},
-
-	products: (req,res) => {
-		res.render('products');
-	},
-
-	productDetail: (req,res) => {
-		let html = readHTML('productDetail');
-		res.send(html);
-	},
-
-	productCart: (req,res) => {
-		let html = readHTML('productCart');
-		res.send(html);
-	},
+	}
 };
 
 module.exports = controller;

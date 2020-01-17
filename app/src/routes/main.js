@@ -4,6 +4,7 @@ const router = express.Router();
 
 // ************ Controller Require ************
 const mainController = require('../controllers/mainController');
+const productsRoute = require('./products')
 
 /* GET - home page. */
 router.get('/', mainController.root);
@@ -13,10 +14,7 @@ router.get('/register', mainController.register);
 
 router.post('/register', mainController.registerSaveUser)
 
-router.get('/products', mainController.products);
+router.use('/products', productsRoute)
 
-router.get('/productDetail/:id', mainController.productDetail);
-
-router.get('/productCart', mainController.productCart);
 
 module.exports = router;
