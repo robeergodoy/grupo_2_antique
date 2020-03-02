@@ -27,7 +27,7 @@ function binarySearch(arrayObjetc, first, last, id) {
 }
 
 const controller = {    
-    products: (req,res) => {
+    products: (req,res, next) => {
         res.render('products', {productsList})
     },
 
@@ -38,13 +38,12 @@ const controller = {
     productDetail: (req, res) => {
         let productIndex = binarySearch(productsList, 0, productsList.length - 1, req.params.id)
 
-        res.render('productDetail', {product: productsList[productIndex]})
+        res.render('productDetail', {product: productsList[productIndex], isProductForEdit: false})
     },
 
     productCreateSave: (req, res) => {
         let newProduct = req.body
 
-        console.log("...................................", newProduct)
         newProduct.id = ((productsList[productsList.length - 1]).id) + 1
 
 /* Falt validar que sucede cuando no queremos subir ninguna foro */
@@ -60,12 +59,19 @@ const controller = {
         res.redirect('/')
     },
   
-    productCart: (req,res) => {
+    productCart: (req,res, next) => {
 
     },
 
     productEdit: (req, res) => {
+        let productIndex = binarySearch(productsList, 0, productsList.length - 1, req.params.id)
+        res.render('productEdit', {product: productsList[productIndex], isProductForEdit : true })
+    },
 
+    productSave: (req, res) => {
+        console.log(".......................................v",req.body);
+        
+        res.redirect(`/products/${req.params.id}`)
     }
 }
 

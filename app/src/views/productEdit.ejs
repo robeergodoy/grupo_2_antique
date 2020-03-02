@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+	<%- include('./partials/head', {headCssPath: ["/css/main.css", "/css/header.css", "/css/productInfo.css", "/css/footer.css"]}) %> 
+	<body>
+		<%- include('./partials/header') %> 
+
+		<div class="productDetail">
+			<%- include('./productInfo', {product, isProductForEdit}) %>
+		</div>
+
+		<%- include('./partials/footer') %> 
+	</body>
+</html>

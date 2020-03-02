@@ -1,11 +1,53 @@
-<article>
-    <h4 class="productInfo-productName"> <%= product.name %>  </h4>
+<div class="container">
+    <div class="row">
+        <article class="productInfo col-sm-12">
 
-    <img class="productInfo-productImage" src="../images/<%= product.imageName %>" alt="hoa">
+            <% if(isProductForEdit == false) { %>
+                
+                <h4 class=" productInfo-productName col-sm-12"> <%= product.name %>  </h4>
+                
+                <img class="productInfo-productImage col-sm-12 col-lg-7" src="../images/<%= product.imageName %>" alt="hoa">
+                
+                <div>
+                    <h2 class="productInfo-productPrice col-sm-12 col-lg-5"> $<%= product.price %> </h2>
+                    
+                    <p class="productInfo-productDescription col-sm-12 col-lg-5">
+                        <%= product.description %> 
+                    </p>
+                    
+                    
+                    <form action="/products/<%= product.id %>/edit" method="GET">
+                        <button type="submit">
+                            Edit
+                        </button>
+                    </form>
+                </div>
+                
+            <% } else { %>
 
-    <h2 class="productInfo-productPrice"> $<%= product.price %> </h2>
+                <form action="/products/<%= product.id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <h4 class=" productInfo-productName col-sm-12"> 
+                        <input type="text" name="sdfg" id="sdfg" value="<%= product.name %>">    
+                    </h4>
+                
+                    <div>
+                        <h2 class="productInfo-productPrice col-sm-12 col-lg-5"> 
+                            <input type="text" name="" id="" value="$<%= product.price %>">    
+                        </h2>
+                    
+                        <p class="productInfo-productDescription col-sm-12 col-lg-5">
+                            <input type="text" name="" id="" value="<%= product.description %> ">
+                        </p>
 
-    <p class="productInfo-productDescription">
-        <%= product.description %> 
-    </p>
-</article>
+                    
+                        <button type="submit">
+                            Save
+                        </button>
+                    </div>
+                </form>
+
+            <% } %>
+
+        </article>
+    </div>
+</div>

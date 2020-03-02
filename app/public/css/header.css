@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-  }
+}
 
 html, body {
     min-height: 100vh;
@@ -28,7 +28,8 @@ html, body {
 
     background-color: #DCDCDC;
     border-radius: 5px;
-  }
+    margin-bottom: 30px;
+}
   
 .main-header_home-link,
 .main-header_signin-link,

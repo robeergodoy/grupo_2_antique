@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head', {headCssPath:["css/register.css"]}) %> 
+
+
+<body>
+
+
+  <div class="container">
+    <div class="form__top">
+      <h2>Completa <span>tus datos</span></h2>
+    </div>
+
+    <form action="/login" method="POST">
+      <p>
+        <label>E-mail:</label>
+        <input type="email" name="email" required>
+      </p>
+
+      <p>
+        <label>Contraseña:</label>
+        <input type="password" name="password" required>
+      </p>
+
+      <div class="form">
+        <input class="submit" type="submit" value="LogIn">
+        <input class="reset" type="reset" value="Clean">
+      </div>
+    </form>
+</body>
+
+</html>

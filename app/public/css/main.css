@@ -15,7 +15,7 @@
 
 * {
     box-sizing: border-box;
-  }
+}
 
 html, body {
     min-height: 100vh;
@@ -28,8 +28,14 @@ body {
     font-weight: 300;
 
     /*background-color: var(--white);*/
+    
+}
 
+body {
+    background-image: url("../images/wall-paper.jpg");
     background-color: #F5F5F5;
+    background-position: center;
+    background-blend-mode: luminosity;
 }
 
 

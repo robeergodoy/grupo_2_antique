@@ -24,6 +24,7 @@ router.get('/create', productsController.productCreate)
 router.get('/:id', productsController.productDetail)
 
 router.get('/:id/edit', productsController.productEdit)
+router.put('/:id/edit', productsController.productSave)
 
 
 
