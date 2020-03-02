@@ -1,11 +1,11 @@
 <article>
-    <h4> <%= product.name %>  </h4>
+    <h4 class="productInfo-productName"> <%= product.name %>  </h4>
 
-    <img src="../images/<%= product.imageName %>" alt="hoa">
+    <img class="productInfo-productImage" src="../images/<%= product.imageName %>" alt="hoa">
 
-    <h2> $<%= product.price %> </h2>
+    <h2 class="productInfo-productPrice"> $<%= product.price %> </h2>
 
-    <p>
+    <p class="productInfo-productDescription">
         <%= product.description %> 
     </p>
 </article>
