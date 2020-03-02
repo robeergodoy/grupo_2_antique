@@ -44,6 +44,7 @@ const controller = {
     productCreateSave: (req, res) => {
         let newProduct = req.body
 
+        console.log("...................................", newProduct)
         newProduct.id = ((productsList[productsList.length - 1]).id) + 1
 
 /* Falt validar que sucede cuando no queremos subir ninguna foro */
@@ -51,7 +52,7 @@ const controller = {
         newProduct.imageName = req.files[0].filename
 
         newProduct.category = ""
-        
+
         productsList.push(newProduct)
         productsList = JSON.stringify(productsList)
         fs.writeFileSync(productsDbPath, productsList)

@@ -1,1 +1,58 @@
-[{"id":0,"name":"Mates artesanales","price":100,"imageName":"mates.jpeg","category":""},{"id":1,"name":"Joyas de plata","price":230,"imageName":"joyas.jpeg","category":""},{"id":2,"name":"Tapices Artesanales","price":380,"imageName":"tapices.jpeg","category":""},{"id":3,"name":"Tapices Artesanales","price":380,"imageName":"tapices.jpeg","category":""},{"productName":"Ojos de piel","price":123,"id":4,"imageName":"image-1579290127654.png","category":""},{"name":"asdf","price":"","id":5,"imageName":"image-1579290794351.png","category":""}]
+[
+    {
+        "id": 0,
+        "name": "Mates artesanales",
+        "price": 100,
+        "imageName": "mates.jpeg",
+        "category": "",
+        "description": ""
+    },
+    {
+        "id": 1,
+        "name": "Joyas de plata",
+        "price": 230,
+        "imageName": "joyas.jpeg",
+        "category": "",
+        "description": ""
+    },
+    {
+        "id": 2,
+        "name": "Tapices Artesanales",
+        "price": 380,
+        "imageName": "tapices.jpeg",
+        "category": "",
+        "description": ""
+    },
+    {
+        "id": 3,
+        "name": "Tapices Artesanales",
+        "price": 380,
+        "imageName": "tapices.jpeg",
+        "category": "",
+        "description": ""
+    },
+    {
+        "productName": "Ojos de piel",
+        "price": 123,
+        "id": 4,
+        "imageName": "image-1579290127654.png",
+        "category": "",
+        "description": ""
+    },
+    {
+        "name": "asdf",
+        "price": "",
+        "id": 5,
+        "imageName": "image-1579290794351.png",
+        "category": "",
+        "description": ""
+    },
+    {
+        "name": "asdf",
+        "price": "asdf",
+        "description": "asdf",
+        "id": 6,
+        "imageName": "image-1583162110649.png",
+        "category": ""
+    }
+]
