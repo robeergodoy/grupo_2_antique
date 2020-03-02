@@ -5,7 +5,7 @@
         "price": 100,
         "imageName": "mates.jpeg",
         "category": "",
-        "description": ""
+        "description": "lorem asiodfiasdfioasdf"
     },
     {
         "id": 1,
@@ -13,7 +13,7 @@
         "price": 230,
         "imageName": "joyas.jpeg",
         "category": "",
-        "description": ""
+        "description": "lorem asiodfiasdfioasdf"
     },
     {
         "id": 2,
@@ -21,7 +21,7 @@
         "price": 380,
         "imageName": "tapices.jpeg",
         "category": "",
-        "description": ""
+        "description": "akshdjkfhajksdjkfjashdjkfhjkahdfjkhjalsdhfjlhasdf"
     },
     {
         "id": 3,
@@ -29,7 +29,7 @@
         "price": 380,
         "imageName": "tapices.jpeg",
         "category": "",
-        "description": ""
+        "description": "akshdjkfhajksdjkfjashdjkfhjkahdfjkhjalsdhfjlhasdf"
     },
     {
         "productName": "Ojos de piel",
@@ -37,7 +37,7 @@
         "id": 4,
         "imageName": "image-1579290127654.png",
         "category": "",
-        "description": ""
+        "description": "akshdjkfhajksdjkfjashdjkfhjkahdfjkhjalsdhfjlhasdf"
     },
     {
         "name": "asdf",
@@ -45,12 +45,12 @@
         "id": 5,
         "imageName": "image-1579290794351.png",
         "category": "",
-        "description": ""
+        "description": "akshdjkfhajksdjkfjashdjkfhjkahdfjkhjalsdhfjlhasdf"
     },
     {
         "name": "asdf",
         "price": "asdf",
-        "description": "asdf",
+        "description": "akshdjkfhajksdjkfjashdjkfhjkahdfjkhjalsdhfjlhasdf",
         "id": 6,
         "imageName": "image-1583162110649.png",
         "category": ""

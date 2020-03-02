@@ -28,7 +28,7 @@ function binarySearch(arrayObjetc, first, last, id) {
 
 const controller = {    
     products: (req,res) => {
-        res.render('products', {productsList: productsList})
+        res.render('products', {productsList})
     },
 
     productCreate: (req, res) => {
@@ -65,7 +65,7 @@ const controller = {
     },
 
     productEdit: (req, res) => {
-        
+
     }
 }
 
