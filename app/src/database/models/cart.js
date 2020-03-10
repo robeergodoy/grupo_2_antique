@@ -1,4 +1,4 @@
-'use strict';
+z|'use strict';
 module.exports = (sequelize, DataTypes) => {
   const cart = sequelize.define('cart', {
     isActive: DataTypes.BOOLEAN,
