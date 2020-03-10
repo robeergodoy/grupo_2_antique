@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
     isActive: DataTypes.BOOLEAN
   }, {});
   seller.associate = function(models) {
-    // associations can be defined here
+    seller.hasMany(models.product, {as: 'products'})
   };
   return seller;
 };
