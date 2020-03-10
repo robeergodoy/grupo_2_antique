@@ -30,12 +30,14 @@ const controller = {
 		let newUser = req.body
 		newUser.password = bcrypt.hashSync(newUser.password, 10)
 
-		db.user.create({
-			email: newUser.email,
-			password: newUser.password,
-			name: newUser.firstName,
-			lastName: newUser.lastName
-		})
+		db.seller.create({
+			name: "",
+			isActive: false,
+			bio: "",
+			profile: newUser
+		  }, {
+			include: [ 'profile' ]
+		  });
 
 		res.redirect('/')
 	},
