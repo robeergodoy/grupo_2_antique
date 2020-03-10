@@ -2,10 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcrypt')
 let productsJson = fs.readFileSync('./data/dataBase.json', {encoding: 'utf-8'})
-let usersListJson = fs.readFileSync('./data/users.json')
+var db = require('../database/models')
 
 productsJson = JSON.parse(productsJson)
-usersListJson = JSON.parse(usersListJson)
 
 let userLogged = false
 
@@ -29,15 +28,14 @@ const controller = {
 
 	registerSaveUser: (req, res, next) => {
 		let newUser = req.body
-
 		newUser.password = bcrypt.hashSync(newUser.password, 10)
-		newUser.category = ""
-		newUser.id = usersListJson[usersListJson.length - 1].id + 1
 
-		usersListJson.push(newUser)
-		usersListJson = JSON.stringify(usersListJson)
-
-		fs.writeFileSync('./data/users.json', usersListJson)
+		db.user.create({
+			email: newUser.email,
+			password: newUser.password,
+			name: newUser.firstName,
+			lastName: newUser.lastName
+		})
 
 		res.redirect('/')
 	},

@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     isActive: DataTypes.BOOLEAN
   }, {});
   product.associate = function(models) {
-    product.belongdToMany(models.cart, {through: 'cart_product', foreignKey: 'productId', as: 'carts'})
+    product.belongsToMany(models.cart, {through: 'cart_product', foreignKey: 'productId', as: 'carts'})
   };
   return product;
 };
