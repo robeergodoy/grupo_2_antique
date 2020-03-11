@@ -117,10 +117,12 @@ body {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
+/*
 .product-box:hover p{
     height: 40px;
     margin-top: 15px;
 }
+*/
 
 
 /* Media-Queries */
