@@ -27,16 +27,29 @@ const controller = {
 		let newUser = req.body
 		newUser.password = bcrypt.hashSync(newUser.password, 10)
 
-		db.seller.create({
-			name: "",
-			isActive: false,
-			bio: "",
-			profile: newUser,
-		  }, {
-			include: [ 'profile' ]
-		  });
-
-		res.redirect('/')
+		db.seller.findOrCreate({
+			where: { },
+			include: [ {
+				model: db.user,
+				as: 'profile',
+				where: {
+				    email: newUser.email
+				}
+			}],
+			defaults: {
+				name: "",
+				isActive: false,
+				bio: "",
+				profile: newUser
+			}
+		})
+		.spread((seller, created) => {
+			if (created) {
+				  res.redirect('/')
+			} else {
+				res.redirect('/register')
+			}
+		})
 	},
 
 	login: (req, res, next) => {
