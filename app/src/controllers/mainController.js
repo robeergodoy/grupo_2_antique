@@ -45,14 +45,23 @@ const controller = {
 
 	validateUser: (req, res, next) => {
 
-		let userInfo = req.body
-		if(validateUser(usersListJson, userInfo.email, userInfo.password) != -1) {
-			userLogged = true
-		}
+		let {email, password} = req.body
 
-		console.log("..............................", userLogged);
-		
-		res.redirect('/')
+		db.user.findOne({
+			where: {
+				email: email
+			}
+		}).then(
+			user => {
+				let hash = user.dataValues.password
+				let isMatch = bcrypt.compareSync(password, hash, function(err, result) { return result })
+				if(isMatch) {
+					userLogged = true
+				}
+				console.log("..............................", userLogged);
+				res.redirect('/')
+			}
+		)	
 	}
 };
 
