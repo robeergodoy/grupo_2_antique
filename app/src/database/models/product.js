@@ -10,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   product.associate = function(models) {
     product.belongsToMany(models.cart, {through: 'cart_product', foreignKey: 'productId', as: 'carts'})
+    product.hasOne(models.images)
   };
   return product;
 };
