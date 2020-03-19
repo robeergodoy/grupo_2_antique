@@ -1,14 +1,14 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const user = sequelize.define('user', {
-    email: DataTypes.STRING,
+    email: DataTypes.STRING,  
     password: DataTypes.STRING,
-    name: DataTypes.STRING,
+    firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
     sellerId: DataTypes.INTEGER
   }, {});
   user.associate = function(models) {
-    user.belongsTo(models.seller, {foreignKey: 'sellerId', as: 'seller'})
+    user.belongsTo(models.seller)
   };
   return user;
 };
