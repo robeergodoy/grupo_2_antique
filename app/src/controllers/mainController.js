@@ -6,10 +6,32 @@ var db = require('../database/models')
 
 let userLogged = false
 
+
+db.product.findAll({
+	include: [
+		{
+			model: db.images
+		}
+	]
+}).then(products => {
+	console.log(products)
+})
+
+
 const controller = {
 
 	root: (req, res, next) => {
-		res.render('main', {productsList: productsJson});
+		//res.render('main', {productsList: productsJson});
+		db.product.findAll({
+			include: [
+				{
+					model: db.images
+				}
+			]
+		}).then(products => {
+			console.log(products)
+			res.render('main', {productsList: products})
+		})
 	},
 
 	register: (req,res) => {
