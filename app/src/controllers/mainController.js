@@ -4,20 +4,10 @@ const bcrypt = require('bcrypt')
 let productsJson = fs.readFileSync('./data/dataBase.json', {encoding: 'utf-8'})
 var db = require('../database/models')
 
-productsJson = JSON.parse(productsJson)
-
 let userLogged = false
 
-// ************ Function to Read an HTML File ************
-function readHTML (fileName) {
-	let filePath = path.join(__dirname, `/../views/${fileName}`);
-	let htmlFile = fs.readFileSync(filePath, 'utf-8');
-	return htmlFile;
-}
-
-
-
 const controller = {
+
 	root: (req, res, next) => {
 		res.render('main', {productsList: productsJson});
 	},
@@ -34,7 +24,7 @@ const controller = {
 			name: "",
 			isActive: false,
 			bio: "",
-			profile: newUser
+			profile: newUser,
 		  }, {
 			include: [ 'profile' ]
 		  });
