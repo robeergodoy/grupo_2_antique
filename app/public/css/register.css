@@ -10,9 +10,10 @@ body {
 .container {
 	max-width: 500px;
 	height: auto;
-	background-color: #EFEFEF;
+	background-color: #AFAFAF;
 	margin: 5% auto;
 	padding-bottom: 1rem;
+	
 	
 }
 
@@ -22,16 +23,17 @@ body {
 	padding: 2rem 0 1rem;
 	border-top: solid .4rem #F39B53;
 	margin-bottom: 1rem;
+	
 }
 
 .form__top h2 {
 	font-weight: bold;
-	color: #F39B53;
+	color: #0D0D0D;
 	font-size: 30px;
 }
 
 h2 span {
-	color: #F39B53;
+	color: #0D0D0D;
 }
 
 .form__reg {
@@ -64,16 +66,16 @@ h2 span {
 .submit, .reset {
 	width: 40%;
 	border-bottom: none;
-	background-color: #31B1E5;
+	background-color: #FA9535;
 	color: white;
 }
 
 .reset {
-	background-color: #EDA135;
+	background-color: #FA9535;
 }
 
 .submit:hover {
-	background-color: #4C9ED9;
+	background-color: #FA9535;
 }
 
 .reset:hover{
@@ -86,3 +88,15 @@ input:hover {
 form input {
     display:block;
 }
+body {
+	background-image: url("../images/wall-paper.jpg");
+	background-color: #F5F5F5;
+    background-position: center;
+    background-blend-mode: luminosity;
+}
+
+p {
+	color: #0D0D0D;
+	font-weight: normal;
+	font-family: Arial;
+  }
