@@ -21,8 +21,6 @@ function validateUser(usersList, userEmail, userPassword) {
 	return -1
 }
 
-
-
 /* GET - home page. */
 router.get('/', mainController.root);
 
@@ -35,7 +33,5 @@ router.get('/login', mainController.login)
 router.post('/login', mainController.validateUser)
 
 router.use('/products', productsRoute)
-
-
 
 module.exports = router;

@@ -25,25 +25,23 @@
                 
             <% } else { %>
 
-                <form action="/products/<%= product.id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+                <form action="/products/<%= product.id %>/edit" method="POST">
+                    <h2>Edita el producto</h2>
                     <h4 class=" productInfo-productName col-sm-12"> 
-                        <input type="text" name="sdfg" id="sdfg" value="<%= product.title%>">    
+                        <p>Título</p>
+                        <input type="text" name="title" id="" value="<%= product.title%>">    
                     </h4>
-                
-                    <div>
-                        <h2 class="productInfo-productPrice col-sm-12 col-lg-5"> 
-                            <input type="text" name="" id="" value="$<%= product.price %>">    
-                        </h2>
-                    
-                        <p class="productInfo-productDescription col-sm-12 col-lg-5">
-                            <input type="text" name="" id="" value="<%= product.description %> ">
-                        </p>
+                    <h4 class="productInfo-productPrice col-sm-12 col-lg-5"> 
+                        <p>Precio</p>
+                        <input type="text" name="price" id="" value="<%= product.price %>">    
+                    </h4>
+                    <h4 class="productInfo-productDescription col-sm-12 col-lg-5">
+                        <p>Descripción</p>
+                        <input type="text" name="description" id="" value="<%= product.description %> ">
+                    </h4>
 
-                    
-                        <button type="submit">
-                            Save
-                        </button>
-                    </div>
+                    <button type="submit">
+                        Save
                 </form>
 
             <% } %>

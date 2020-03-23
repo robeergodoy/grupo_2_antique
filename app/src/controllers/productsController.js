@@ -7,29 +7,17 @@ let productsList = fs.readFileSync(productsDbPath, {encoding: 'utf8'})
 
 productsList = JSON.parse(productsList)
 
-function binarySearch(arrayObjetc, first, last, id) {
-    var mid = Math.floor((last - first)/2 + first)
-
-    if (first > last) {
-        return -1
-    }
-
-    if (arrayObjetc[mid].id == id) {
-        return mid
-    }
-    
-    if (arrayObjetc[mid].id > id){
-        return binarySearch(arrayObjetc, first, mid - 1, id)
-    }
-
-    if (arrayObjetc[mid].id < id) {
-        return binarySearch(arrayObjetc, mid + 1, last, id)
-    }
-}
-
 const controller = {    
     products: (req,res, next) => {
-        res.render('products', {productsList})
+        db.product.findAll({
+			include: [
+				{
+					model: db.images
+				}
+			]
+		}).then(products => {
+			res.render('products', {productsList: products})
+        })
     },
 
     productCreate: (req, res) => {
@@ -53,7 +41,7 @@ const controller = {
 
         newProduct.id = ((productsList[productsList.length - 1]).id) + 1
 
-/* Falt validar que sucede cuando no queremos subir ninguna foro */
+     /* Falta validar que sucede cuando no queremos subir ninguna foto */
 
         newProduct.imageName = req.files[0].filename
 
@@ -71,14 +59,33 @@ const controller = {
     },
 
     productEdit: (req, res) => {
-        let productIndex = binarySearch(productsList, 0, productsList.length - 1, req.params.id)
-        res.render('productEdit', {product: productsList[productIndex], isProductForEdit : true })
+        
+        db.product.findByPk(req.params.id,{
+			include: [
+				{
+					model: db.images
+				}
+			]
+		}).then(product => {
+			res.render('productEdit', {product: product, isProductForEdit : true })
+		})
     },
 
     productSave: (req, res) => {
-        console.log(".......................................v",req.body);
-        
-        res.redirect(`/products/${req.params.id}`)
+
+        console.log("Product body",req.body);
+        db.product.update(
+            {title: req.body.title,
+             price: req.body.price,
+             description: req.body.description},
+            {where: {
+                id:  req.params.id
+                }
+            }
+        )
+        .then( () => {
+            res.redirect(`/products/${req.params.id}`)
+        })
     }
 }
 
