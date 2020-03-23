@@ -4,7 +4,6 @@ const router = express.Router();
 
 // ************ Controller Require ************
 const mainController = require('../controllers/mainController');
-const productsRoute = require('./products')
 
 function validateUser(usersList, userEmail, userPassword) {
 	// si el usuario no existe, devolvemos -1
@@ -31,7 +30,5 @@ router.post('/register', mainController.registerSaveUser)
 
 router.get('/login', mainController.login)
 router.post('/login', mainController.validateUser)
-
-router.use('/products', productsRoute)
 
 module.exports = router;
