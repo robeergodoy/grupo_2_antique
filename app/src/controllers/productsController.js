@@ -9,7 +9,15 @@ productsList = JSON.parse(productsList)
 
 const controller = {    
     products: (req,res, next) => {
-        res.render('products', {productsList})
+        db.product.findAll({
+			include: [
+				{
+					model: db.images
+				}
+			]
+		}).then(products => {
+			res.render('products', {productsList: products})
+        })
     },
 
     productCreate: (req, res) => {
@@ -33,7 +41,7 @@ const controller = {
 
         newProduct.id = ((productsList[productsList.length - 1]).id) + 1
 
-/* Falt validar que sucede cuando no queremos subir ninguna foro */
+     /* Falta validar que sucede cuando no queremos subir ninguna foto */
 
         newProduct.imageName = req.files[0].filename
 
