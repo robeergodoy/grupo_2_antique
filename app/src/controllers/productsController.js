@@ -1,5 +1,6 @@
 const fs = require('fs')
 const productsDbPath = './data/dataBase.json'
+var db = require('../database/models')
 
 
 let productsList = fs.readFileSync(productsDbPath, {encoding: 'utf8'})
@@ -36,9 +37,15 @@ const controller = {
     },
 
     productDetail: (req, res) => {
-        let productIndex = binarySearch(productsList, 0, productsList.length - 1, req.params.id)
-
-        res.render('productDetail', {product: productsList[productIndex], isProductForEdit: false})
+        db.product.findByPk(req.params.id,{
+			include: [
+				{
+					model: db.images
+				}
+			]
+		}).then(product => {
+			res.render('productDetail', {product: product, isProductForEdit: false})
+		})
     },
 
     productCreateSave: (req, res) => {

@@ -4,9 +4,9 @@
 
             <% if(isProductForEdit == false) { %>
                 
-                <h4 class=" productInfo-productName col-sm-12"> <%= product.name %>  </h4>
+                <h4 class=" productInfo-productName col-sm-12"> <%= product.title %>  </h4>
                 
-                <img class="productInfo-productImage col-sm-12 col-lg-7" src="../images/<%= product.imageName %>" alt="hoa">
+                <img class="productInfo-productImage col-sm-12 col-lg-7" src="<%=product.image.image_1%>" alt="hoa">
                 
                 <div>
                     <h2 class="productInfo-productPrice col-sm-12 col-lg-5"> $<%= product.price %> </h2>
@@ -27,7 +27,7 @@
 
                 <form action="/products/<%= product.id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
                     <h4 class=" productInfo-productName col-sm-12"> 
-                        <input type="text" name="sdfg" id="sdfg" value="<%= product.name %>">    
+                        <input type="text" name="sdfg" id="sdfg" value="<%= product.title%>">    
                     </h4>
                 
                     <div>
