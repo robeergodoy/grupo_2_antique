@@ -5,11 +5,15 @@ const express = require('express');
 const logger = require('morgan');
 const path = require('path');
 const methodOverrider = require('method-override')
+const session = require('express-session')
+const authMiddleware = require('./database/middlewares/auth')
 
 // ************ express() - (don't touch) ************
 const app = express();
 
 // ************ Middlewares - (don't touch) ************
+app.use(session({secret: 'Mensaje secreto'}))
+app.use(authMiddleware)
 app.use(express.static(path.join(__dirname, '../public')));  // Necesario para los archivos estáticos en el folder /public
 app.use(express.urlencoded({ extended: false }));
 app.use(logger('dev'));
@@ -26,7 +30,10 @@ app.set('views', './src/views'); // Seteo de la ubicación de la carpeta "views"
 // ************ WRITE YOUR CODE FROM HERE ************
 // ************ Route System require and use() ************
 const mainRouter = require('./routes/main');
+
+
 app.use('/', mainRouter);
+
 
 
 // ************ DON'T TOUCH FROM HERE ************

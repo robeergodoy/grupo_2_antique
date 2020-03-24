@@ -3,6 +3,7 @@ require('dotenv').config()
 module.exports = {
     development: {
       use_env_variable: 'DB_URL',
+      password: null
     },
     test: {
       username: "root",

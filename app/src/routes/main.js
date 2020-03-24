@@ -5,37 +5,22 @@ const router = express.Router();
 // ************ Controller Require ************
 const mainController = require('../controllers/mainController');
 const productsRoute = require('./products')
-
-function validateUser(usersList, userEmail, userPassword) {
-	// si el usuario no existe, devolvemos -1
-	// si el usuario existe, devolvemos el index del array
-
-	for(let i = 0; i < usersList.length; i++) {
-		if(usersList[i].email == userEmail) {
-			if(bcrypt.compareSync(userPassword, usersList[i].password) == true) {
-				return i
-			}
-		}
-	}
-
-	return -1
-}
-
-
+const userController = require('../controllers/userController')
+const userMiddleware = require('../database/middlewares/auth')
 
 /* GET - home page. */
 router.get('/', mainController.root);
 
 /* GET - register page. */
-router.get('/register', mainController.register);
+router.get('/register', userController.register);
 
-router.post('/register', mainController.registerSaveUser)
+router.post('/register', userController.registerSaveUser)
 
-router.get('/login', mainController.login)
-router.post('/login', mainController.validateUser)
+router.get('/login', userController.login)
+router.post('/login', userController.validateUser)
+
+router.get('/logout', userController.logout)
 
 router.use('/products', productsRoute)
-
-
 
 module.exports = router;
