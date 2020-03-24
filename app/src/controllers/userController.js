@@ -94,7 +94,7 @@ let userController = {
 					console.log("..............................", res.locals.isAuthenticated);
 					res.redirect('/')
 				} else {
-					res.send('no existis puto')
+					res.send('no existis')
 				}
 			}
         )	
