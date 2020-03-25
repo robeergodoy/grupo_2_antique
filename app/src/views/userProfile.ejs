@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+    <%- include('./partials/head', {headCssPath:["/css/register.css", "/css/header.css", "/css/footer.css"]}) %>
+
+<body>
+    <%- include('./partials/header') %>
+
+    <div class="container registerContainer">
+
+        <form action="/user/profile/<%= user.email %>?_method=PUT " method="POST">
+            <p>
+                <label>Nombre:</label>
+                <input type="text" name="firstName" value="<%= user.firstName %> " required>
+            </p>
+
+            <p>
+                <label>Apellido:</label>
+                <input type="text" name="lastName" value="<%= user.lastName %> " required>
+            </p>
+
+            <p>
+                <label>E-mail:</label>
+                <input type="email" name="email" value="<%= user.email %> " required>
+            </p>
+
+            
+            <div class="form">
+                <input class="submit" type="submit" value="Actualizar">
+                <input class="reset" type="reset" value="Limpiar">
+                <form action="/user/delete/<%= user.email %>?_method=DELETE" method="POST">
+                    <button class="submit" type="submit">Eliminar</button>
+                </form>
+            </div>
+        </form>
+    </div>
+
+    <%- include('./partials/footer') %>
+</body>
+
+</html>

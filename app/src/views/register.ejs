@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('./partials/head', {headCssPath:["css/register.css"]}) %> 
+<%- include('./partials/head', {headCssPath:["/css/register.css", "/css/header.css", "/css/footer.css"]}) %>
 
 
 <body>
 
+  <%- include('./partials/header') %>
 
-  <div class="container">
+  <div class="container registerContainer">
     <div class="form__top">
       <h2>Completa <span>tus datos</span></h2>
     </div>
@@ -37,6 +38,8 @@
         <input class="reset" type="reset" value="Limpiar">
       </div>
     </form>
+  </div>
+  <%- include('./partials/footer') %>
 </body>
 
 </html>

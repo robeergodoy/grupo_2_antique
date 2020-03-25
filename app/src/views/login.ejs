@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('./partials/head', {headCssPath:["css/register.css"]}) %> 
-
+<%- include('./partials/head', {headCssPath:["/css/register.css", "/css/header.css", "/css/footer.css"]}) %>
 
 <body>
+  <%- include('./partials/header') %>
 
+  <div class="banner"></div>
+  
+  <div class="container loginContainer">
 
-  <div class="container">
-    <div class="form__top">
+    <div class="form_top">
       <h2>Completa <span>tus datos</span></h2>
     </div>
 
-    <form action="/login" method="POST">
+    <form action="/user/login" method="POST">
       <p>
         <label>E-mail:</label>
         <input type="email" name="email" required>
@@ -28,6 +30,11 @@
         <input class="reset" type="reset" value="Clean">
       </div>
     </form>
+
+  </div>
+
 </body>
+
+<%- include('./partials/footer') %>
 
 </html>

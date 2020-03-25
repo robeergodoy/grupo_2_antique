@@ -23,10 +23,10 @@
         <% if (!isAuthenticated) { %>
             
             <div class="main-header_signin-cart col-lg-3 row">
-                <a href="/login" class="main-header_signin-link col-lg-4">
+                <a href="/user/login" class="main-header_signin-link col-lg-4">
                     Log in
                 </a>
-                <a href="/register" class="main-header_signin-link col-lg-4">
+                <a href="/user/register" class="main-header_signin-link col-lg-4">
                     Register
                 </a>
                 <a href="productCart.html" class="main-header_cart-link col-lg-4">
@@ -35,10 +35,10 @@
             </div>
         <% } else { %>
             <div class="main-header_signin-cart col-lg-3 row">
-                <a href="logout" class="main-header_signin-link col-lg-4">
+                <a href="/user/logout" class="main-header_signin-link col-lg-4">
                     LogOut
                 </a>
-                <a href="#" class="main-header_signin-link col-lg-4">
+                <a href="/user/profile" class="main-header_signin-link col-lg-4">
                     <%= `${user.firstName}` %> 
                 </a>
                 <a href="productCart.html" class="main-header_cart-link col-lg-4">
