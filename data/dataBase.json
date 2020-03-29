@@ -1,0 +1,58 @@
+[
+    {
+        "id": 0,
+        "name": "Mates artesanales",
+        "price": 100,
+        "imageName": "mates.jpeg",
+        "category": "",
+        "description": "lorem asiodfiasdfioasdf"
+    },
+    {
+        "id": 1,
+        "name": "Joyas de plata",
+        "price": 230,
+        "imageName": "joyas.jpeg",
+        "category": "",
+        "description": "lorem asiodfiasdfioasdf"
+    },
+    {
+        "id": 2,
+        "name": "Tapices Artesanales",
+        "price": 380,
+        "imageName": "tapices.jpeg",
+        "category": "",
+        "description": "akshdjkfhajksdjkfjashdjkfhjkahdfjkhjalsdhfjlhasdf"
+    },
+    {
+        "id": 3,
+        "name": "Tapices Artesanales",
+        "price": 380,
+        "imageName": "tapices.jpeg",
+        "category": "",
+        "description": "akshdjkfhajksdjkfjashdjkfhjkahdfjkhjalsdhfjlhasdf"
+    },
+    {
+        "productName": "Ojos de piel",
+        "price": 123,
+        "id": 4,
+        "imageName": "image-1579290127654.png",
+        "category": "",
+        "description": "akshdjkfhajksdjkfjashdjkfhjkahdfjkhjalsdhfjlhasdf"
+    },
+    {
+        "name": "asdf",
+        "price": "",
+        "id": 5,
+        "imageName": "image-1579290794351.png",
+        "category": "",
+        "description": "akshdjkfhajksdjkfjashdjkfhjkahdfjkhjalsdhfjlhasdf"
+    },
+    {
+        "name": "asdf",
+        "price": "asdf",
+        "description": "akshdjkfhajksdjkfjashdjkfhjkahdfjkhjalsdhfjlhasdf",
+        "id": 6,
+        "imageName": "image-1583162110649.png",
+        "category": ""
+    }
+]

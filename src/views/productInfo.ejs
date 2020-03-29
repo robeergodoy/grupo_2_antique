@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <article class="productInfo col-sm-12">
+
+            <% if(isProductForEdit == false) { %>
+                
+                <h4 class=" productInfo-productName col-sm-12"> <%= product.title %>  </h4>
+                
+                <img class="productInfo-productImage col-sm-12 col-lg-7" src="<%=product.image.image_1%>" alt="hoa">
+                
+                <div>
+                    <h2 class="productInfo-productPrice col-sm-12 col-lg-5"> $<%= product.price %> </h2>
+                    
+                    <p class="productInfo-productDescription col-sm-12 col-lg-5">
+                        <%= product.description %> 
+                    </p>
+                    
+                    
+                    <form action="/products/<%= product.id %>/edit" method="GET">
+                        <button type="submit">
+                            Edit
+                        </button>
+                    </form>
+                </div>
+                
+            <% } else { %>
+
+                <form action="/products/<%= product.id %>/edit" method="POST">
+                    <h2>Edita el producto</h2>
+                    <h4 class=" productInfo-productName col-sm-12"> 
+                        <p>Título</p>
+                        <input type="text" name="title" id="" value="<%= product.title%>">    
+                    </h4>
+                    <h4 class="productInfo-productPrice col-sm-12 col-lg-5"> 
+                        <p>Precio</p>
+                        <input type="text" name="price" id="" value="<%= product.price %>">    
+                    </h4>
+                    <h4 class="productInfo-productDescription col-sm-12 col-lg-5">
+                        <p>Descripción</p>
+                        <input type="text" name="description" id="" value="<%= product.description %> ">
+                    </h4>
+
+                    <button type="submit">
+                        Save
+                </form>
+
+            <% } %>
+
+        </article>
+    </div>
+</div>

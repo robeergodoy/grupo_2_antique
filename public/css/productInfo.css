@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+.productInfo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.productDetail .container {
+    background-color: #DCDCDC;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.productInfo-productDescription {
+    font-size: 20px;
+    padding: 15px;
+}

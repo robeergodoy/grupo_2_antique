@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<%- include('./partials/head', {headCssPath: ["/css/main.css", "/css/header.css", "/css/footer.css"]}) %>
+
+	<body>
+	<%- include('./partials/header') %>
+	
+		<div class="banner"></div>
+
+		<div class="container products-wrapper">
+			<div class="row">
+				<% productsList.forEach(product => { %>
+					<%- include('./product', {product: product}) %> 
+				<% }) %>
+			</div>
+		</div>
+		
+	</body>
+	<%- include('./partials/footer') %>	
+</html>

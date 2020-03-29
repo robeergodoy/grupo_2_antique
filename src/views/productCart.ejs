@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Antique</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="/css/index.css">
+	</head>
+	<body>
+		<header class="main-header">
+			<div class="main-header_container">
+				<div class="main-header_logo">
+					<a href="/" class="main-header_home-link" class="col-2">
+						Antique
+					</a>
+				</div>
+				<div class="main-header_search-form">
+					<form action="" method="GET" class="search-form">
+							<input type="text" placeholder="Busca artículos o tiendas" class="search-form_input">
+							<button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+					</form>
+				</div>
+				<div class="topnav">
+ 					  <a class="active" href="#home">Home</a>
+  					<a href="productos.ejs">Productos</a>
+					  <a href="register.html">Registro</a>
+					  <a href="#">About</a>
+				</div>
+				<div class="main-header_signin-cart">
+					<a href="/register" class="main-header_signin-link">
+							Inicia sesión
+					</a>
+					<a href="productCart.html" class="main-header_cart-link">
+						<i class="fas fa-shopping-cart"></i>
+					</a>
+				</div>
+			</div>
+
+			<nav class="header-navbar">
+				<ul>
+					<li><a href="#">Ofertas</a></li>
+					<li><a href="#">Accesorios</a></li>
+					<li><a href="#">Ropa y Calzado</a></li>
+					<li><a href="#">Hogar</a></li>
+					<li><a href="#">Arte</a></li>
+					<li><a href="#">Regalos</a></li>
+				</ul>
+		    </nav>
+		</header>
+
+		<!-- Banner -->
+		<div class="banner"></div>
+		<!-- /Banner -->
+
+		<div class="container products-wrapper">
+			<section class="product-box">
+				<a href="">
+					<figure class="product-box_image">
+						<img src="images/mates.jpeg" alt="imagen de producto">
+					</figure>
+					<article class="product-box_data">
+						<h2>$100</h2>
+						<p>Mates artesanales</p>
+					</article>
+				</a>
+			</section>
+			<section class="product-box">
+				<a href="">
+					<figure class="product-box_image">
+						<img src="images/joyas.jpeg" alt="imagen de producto">
+					</figure>
+					<article class="product-box_data">
+						<h2>$230</h2>
+						<p>Joyas de plata</p>
+					</article>
+				</a>
+			</section>
+			<section class="product-box">
+				<a href="">
+					<figure class="product-box_image">
+						<img src="images/tapices.jpeg" alt="imagen de producto">
+					</figure>
+					<article class="product-box_data">
+						<h2>$380</h2>
+						<p>Tapices Artesanales</p>
+					</article>
+				</a>
+			</section>
+		</div>
+
+		<!-- footer -->
+		<footer class="main-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-lg-4">
+						<article class="footer-data">
+							<i class="fas fa-credit-card"></i>
+							<h2>Pagá con tarjeta o en efectivo</h2>
+							<p>Tienes cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+						</article>
+					</div>
+					<div class="col-12 col-lg-4">
+						<article class="footer-data">
+							<i class="fas fa-gift"></i>
+							<h2>Envío gratis desde $ 1.000</h2>
+							<p>Solo por estar registrado en Antique tenés envíos gratis en todos los productos.</p>
+						</article>
+					</div>
+					<div class="col-12 col-lg-4">
+						<article class="footer-data">
+							<i class="fas fa-user-shield"></i>
+							<h2>Seguridad, de principio a fin</h2>
+							<p>¿No te gusta? ¡Devolvelo! Estás siempre protegido.</p>
+						</article>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

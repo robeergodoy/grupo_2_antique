@@ -1,0 +1,62 @@
+<header class="main-header container">
+    <div class="main-header_container row container">
+
+        <div class="main-header_logo col-lg-2">
+            <a href="/" class="main-header_home-link">
+                Antique
+            </a>
+        </div>
+
+        <div class="main-header_search-form col-lg-4">
+            <form action="" method="GET" class="search-form">
+                <input type="text" placeholder="Busca artículos o tiendas" class="search-form_input">
+                <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+
+        <div class="topnav col-lg-3 row">
+              <a href="/products" class="col-lg-4">Productos</a>
+              <a href="#" class="col-lg-4">About</a>
+              <a href="/products/create" class="col-lg-4">New Product</a>
+        </div>
+
+        <% if (!isAuthenticated) { %>
+            
+            <div class="main-header_signin-cart col-lg-3 row">
+                <a href="/user/login" class="main-header_signin-link col-lg-4">
+                    Log in
+                </a>
+                <a href="/user/register" class="main-header_signin-link col-lg-4">
+                    Register
+                </a>
+                <a href="productCart.html" class="main-header_cart-link col-lg-4">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        <% } else { %>
+            <div class="main-header_signin-cart col-lg-3 row">
+                <a href="/user/logout" class="main-header_signin-link col-lg-4">
+                    LogOut
+                </a>
+                <a href="/user/profile" class="main-header_signin-link col-lg-4">
+                    <%= `${user.firstName}` %> 
+                </a>
+                <a href="productCart.html" class="main-header_cart-link col-lg-4">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        <% } %> 
+
+    </div>
+
+    <nav class="header-navbar row">
+        <ul class="col-lg-12">
+            <li><a href="#">Ofertas</a></li>
+            <li><a href="#">Accesorios</a></li>
+            <li><a href="#">Ropa y Calzado</a></li>
+            <li><a href="#">Hogar</a></li>
+            <li><a href="#">Arte</a></li>
+            <li><a href="#">Regalos</a></li>
+        </ul>
+    </nav>
+</header>

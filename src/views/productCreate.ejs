@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<%- include('./partials/head', {headCssPath: ["/css/main.css", "/css/header.css", "/css/productCreate.css"]}) %> 
+	<body>
+		<%- include('./partials/header') %> 
+
+		<div class="productCreateBox container">
+			<div class="title">
+				<h1>
+					Register form
+				</h1>
+			</div>
+
+			<div class="raw formWraper">
+				<form action="/products/create" method="POST" class="productCreateForm" enctype="multipart/form-data">
+					<div>
+						<label for="">Titulo:</label>
+						<input type="text" name="title" id="">
+					</div>
+
+					<div>
+						<label for="">Precio</label>
+						<input type="text" name="price" id="">
+					</div>
+
+					<div>
+						<label for="">Cantidad:</label>
+						<input type="text" name="quantity" id="">
+					</div>
+
+					<div>
+						<label for="">Descuento:</label>
+						<input type="text" name="discount" id="">
+					</div>
+
+					<div>
+						<label for="">Descripción</label><br>
+						<textarea name="description" id="" cols="30" rows="10"></textarea>
+					</div>
+
+					<div>
+						<label for="">Elija su imagen</label>
+						<input type="file" name="image" id="">
+					</div>
+
+					<button type="submit">Enviar</button>
+				</form>
+			</div>
+
+		</div>
+
+	</body>
+</html>

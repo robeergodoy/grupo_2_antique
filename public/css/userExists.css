@@ -1,0 +1,8 @@
+.divContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.existsMessage {
+    background-color: grey;
+}
