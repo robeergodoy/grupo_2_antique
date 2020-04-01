@@ -1,8 +1,8 @@
 // ************ Require's ************
 const express = require('express');
 const router = express.Router();
-const userRouter = require('./user')
-const apiRouter = require('./api/products')
+const userRouter = require('./user');
+const apiRouter = require('./api/apiroutes');
 // ************ Controller Require ************
 const mainController = require('../controllers/mainController');
 const userController = require('../controllers/userController')
