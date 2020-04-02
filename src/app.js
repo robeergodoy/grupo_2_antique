@@ -7,10 +7,10 @@ const path = require('path');
 const methodOverrider = require('method-override')
 const session = require('express-session')
 const authMiddleware = require('./database/middlewares/auth')
-
+var cors = require('cors')
 // ************ express() - (don't touch) ************
 const app = express();
-
+app.use(cors())
 // ************ Middlewares - (don't touch) ************
 app.use(session({secret: 'Mensaje secreto'}))
 app.use(authMiddleware)
