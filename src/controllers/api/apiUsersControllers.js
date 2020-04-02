@@ -20,14 +20,10 @@ let apiController = {
     },
 
     findUser: (req, res, next) => {
-        db.users
+        db.user
             .findByPk(req.params.id)
             .then(data => {
-                if (data) {
-                    return res.json(data)
-                }
-    
-                return res.status(404).end('Not found')
+              res.json(data)
             })
     }
 }

@@ -21,5 +21,12 @@ let apiController = {
             })
     }
 }
+findProduct: (req, res, next) => {
+    db.products
+        .findByPk(req.params.id)
+        .then(data => {
+          res.json(data)
+        })
+}
 
 module.exports = apiController
